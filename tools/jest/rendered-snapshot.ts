@@ -1,7 +1,10 @@
 import { render } from 'enzyme';
 import { ReactElement } from 'react';
 
-export function toMatchRenderedSnapshot(this: jest.MatcherUtils, jsx: ReactElement<any>): { message(): string, pass: boolean } {
+export function toMatchRenderedSnapshot(
+  this: jest.MatcherUtils,
+  jsx: ReactElement<unknown>,
+): { message(): string; pass: boolean } {
   try {
     expect(render(jsx)).toMatchSnapshot();
 

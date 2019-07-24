@@ -8,7 +8,12 @@ describe('HelloWorld', () => {
   });
 
   it('should render correctly with the dynamic chunk', () => {
-    const DynamicComponent = () => <div>I'm dynamic</div>;
-    expect(<HelloWorld onClick={jest.fn()} BottomSlot={DynamicComponent}/>).toMatchRenderedSnapshot();
+    const DynamicComponent = () => <div>I&apos;m dynamic</div>;
+    expect(
+      <HelloWorld
+        onClick={jest.fn()}
+        BottomSlot={DynamicComponent}
+      />,
+    ).toMatchRenderedSnapshot();
   });
 });

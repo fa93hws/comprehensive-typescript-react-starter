@@ -22,12 +22,13 @@ export namespace Internal {
       {BottomSlot && <BottomSlot/>}
     </div>
   ));
+
+  HelloWorld.displayName = 'hello-world-component';
 }
 
 export function createHelloWorld() {
   const store = new HelloWorldStore();
-  const presenter = new HelloWorldPresenter();
-  const onClick = () => presenter.loadComponent(store);
+  const onClick = () => HelloWorldPresenter.loadComponent(store);
 
   return observer(() => (
     <Internal.HelloWorld
