@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DynamicComponent should match snapshot 1`] = `
+<h1>
+  I come from dynamic import
+</h1>
+`;
