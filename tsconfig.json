@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "esNext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": "./",
+  }
+}
