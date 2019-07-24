@@ -1,9 +1,11 @@
+import { observer } from 'mobx-react';
 import * as React from 'react';
 import styles from './hello-world.css';
 import testStyles from './test.css';
+import { HelloWorldStore, HelloWorldPresenter } from './hello-world-presenter';
 
 export namespace Internal {
-  export const Component = React.memo(({
+  export const HelloWorld = React.memo(({
     onClick,
     BottomSlot,
   }: {
@@ -22,26 +24,15 @@ export namespace Internal {
   ));
 }
 
+export function createHelloWorld() {
+  const store = new HelloWorldStore();
+  const presenter = new HelloWorldPresenter();
+  const onClick = () => presenter.loadComponent(store);
 
-export const HelloWorld = ({
-  InitialDynamicComponent,
-}: {
-  InitialDynamicComponent?: React.ComponentType
-}) => {
-  const [
-    DynamicComponent,
-    setDynamicComponent,
-  ] = React.useState<React.ComponentType | undefined>(() => InitialDynamicComponent);
-
-  const onClick = React.useCallback(async () => {
-    const { DynamicComponent } = await import(/* webpackChunkName: "dynamic-chunk" */ './dynamic-chunk');
-    setDynamicComponent(() => DynamicComponent);
-  }, [setDynamicComponent]);
-
-  return (
-    <Internal.Component
+  return observer(() => (
+    <Internal.HelloWorld
       onClick={onClick}
-      BottomSlot={DynamicComponent}
+      BottomSlot={store.BottomComponent}
     />
-  );
-};
+  ));
+}
