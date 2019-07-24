@@ -11,7 +11,7 @@ module.exports = {
     },
     'import/resolver': {
       node: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx', '.d.ts']
       }
     },
   },
@@ -39,8 +39,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-misused-new': 'error',
-    // Turn that on when https://github.com/typescript-eslint/typescript-eslint/issues/121 is resolved
-    '@typescript-eslint/indent': 'off',
     // We use the babel rule, as it understands class property syntax
     'babel/no-invalid-this': 'error',
     'import/prefer-default-export': 'off',
@@ -54,14 +52,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'no-param-reassign': 'off',
     'import/no-unresolved': 'off',
-  },
-
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts'],
-      },
-    },
   },
 
   overrides: [
