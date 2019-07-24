@@ -1,3 +1,6 @@
-# simple-typescript-react-starter
+# Comprehensive-typescript-react-starter
 
-Nothing just a simplest working version of typescript and react
+Extended https://github.com/fa93hws/simple-typescript-react-starter
+
+## What's extra?
+Nothing
