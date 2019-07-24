@@ -3,10 +3,10 @@ import { join, resolve } from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export const baseConfig: Configuration = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
     path: resolve(__dirname, '../dist/'),
-    publicPath: '/'
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
@@ -23,10 +23,10 @@ export const baseConfig: Configuration = {
           appendTsSuffixTo: [/\.css$/],
           configFile: 'tsconfig.build.json',
         },
-      }
-    ]
+      },
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin({template: 'index.html'})
-  ]
+    new HtmlWebpackPlugin({ template: 'index.html' }),
+  ],
 };

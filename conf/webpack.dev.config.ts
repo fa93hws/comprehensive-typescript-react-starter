@@ -6,7 +6,7 @@ import { baseConfig } from './webpack.base.config';
 
 const devConfiguration: Configuration = merge(baseConfig, {
   output: {
-    filename: "static/js/[name].js",
+    filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[name].js',
   },
   mode: 'development',
@@ -24,21 +24,21 @@ const devConfiguration: Configuration = merge(baseConfig, {
             options: getCssLoaderOption(false),
           },
         ],
-      }
-    ]
+      },
+    ],
   },
   devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
     hot: true,
-    inline: true
+    inline: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "static/css/[name].css",
-      chunkFilename: "static/css/[name].css"
+      filename: 'static/css/[name].css',
+      chunkFilename: 'static/css/[name].css',
     }),
-  ]
+  ],
 });
 
 export default devConfiguration;

@@ -7,7 +7,7 @@ import { baseConfig } from './webpack.base.config';
 
 const prodConfiguration: Configuration = merge(baseConfig, {
   output: {
-    filename: "static/js/[name].[chunkhash:8].js",
+    filename: 'static/js/[name].[chunkhash:8].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].js',
   },
   mode: 'production',
@@ -25,33 +25,33 @@ const prodConfiguration: Configuration = merge(baseConfig, {
             options: getCssLoaderOption(true),
           },
         ],
-      }
-    ]
+      },
+    ],
   },
   optimization: {
     splitChunks: {
       cacheGroups: {
         vendors: {
-          test:  /node_modules\/(?!markdown-it|katex|mdurl|entities|linkify-it)/,
+          test: /node_modules\/(?!markdown-it|katex|mdurl|entities|linkify-it)/,
           name: 'vendors',
-          chunks: 'all'
-        }
-      }
+          chunks: 'all',
+        },
+      },
     },
     minimizer: [
       new TerserPlugin({
         cache: true,
         parallel: 4,
-        sourceMap: true
+        sourceMap: true,
       }),
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "static/css/[name].[chunkhash:8].css",
-      chunkFilename: "static/css/[name].[chunkhash:8].css"
+      filename: 'static/css/[name].[chunkhash:8].css',
+      chunkFilename: 'static/css/[name].[chunkhash:8].css',
     }),
-  ]
+  ],
 });
 
 export default prodConfiguration;
