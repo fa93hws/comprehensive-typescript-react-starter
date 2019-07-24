@@ -23,7 +23,10 @@ module.exports = {
   },
   globals: {
     "ts-jest": {
-      tsConfig: "<rootDir>/tsconfig.jest.json"
+      tsConfig: "<rootDir>/tsconfig.jest.json",
+      diagnostics: {
+        ignoreCodes: [151001]
+      }
     }
   },
   snapshotSerializers: [
