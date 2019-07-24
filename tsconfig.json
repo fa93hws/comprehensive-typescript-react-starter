@@ -3,7 +3,7 @@
     "strict": true,
     "module": "esNext",
     "moduleResolution": "node",
-    "target": "es6",
+    "target": "es5",
     "jsx": "react",
     "baseUrl": "./",
   }

@@ -3,7 +3,7 @@ import { HelloWorld } from '../hello-world';
 
 describe('HelloWorld', () => {
   it('should render correctly without the dynamic chunk', () => {
-    (expect(<HelloWorld/>) as any).toMatchRenderedSnapshot();
+    expect(<HelloWorld/>).toMatchRenderedSnapshot();
   });
 
   it('should render correctly with the dynamic chunk', () => {

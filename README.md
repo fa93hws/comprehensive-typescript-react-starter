@@ -3,4 +3,5 @@
 Extended https://github.com/fa93hws/simple-typescript-react-starter
 
 ## What's extra?
-Nothing
+### Test
+- Jest with snapshot test.
