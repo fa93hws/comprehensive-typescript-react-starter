@@ -1,5 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { HelloWorld } from './hello-world/hello-world';
+import { createHelloWorld } from './hello-world/hello-world';
+
+const HelloWorld = createHelloWorld();
 
 ReactDOM.render (<HelloWorld/>,document.getElementById('root'));
