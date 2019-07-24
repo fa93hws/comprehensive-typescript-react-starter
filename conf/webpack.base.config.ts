@@ -21,6 +21,7 @@ export const baseConfig: Configuration = {
         loader: 'ts-loader',
         options: {
           appendTsSuffixTo: [/\.css$/],
+          configFile: 'tsconfig.build.json',
         },
       }
     ]
