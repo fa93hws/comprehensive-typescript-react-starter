@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PasswordConfirmationValidationController invalid different password 1`] = `"It should be same as your password"`;
+
+exports[`PasswordConfirmationValidationController invalid long password 1`] = `"Password must not be longer than 10 characters"`;
+
+exports[`PasswordConfirmationValidationController invalid short password 1`] = `"Password must be at least 6 characters long!"`;
+
+exports[`PasswordValidationController invalid long password 1`] = `"Password must not be longer than 10 characters"`;
+
+exports[`PasswordValidationController invalid short password 1`] = `"Password must be at least 6 characters long!"`;

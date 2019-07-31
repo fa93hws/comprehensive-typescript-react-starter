@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidationField should render correctly for empty value with error message 1`] = `
+<div>
+  <h4>
+    title
+  </h4>
+  <input
+    class="undefined"
+    type="text"
+    value=""
+  />
+  <p>
+    there is an error
+  </p>
+</div>
+`;
+
+exports[`ValidationField should render correctly for empty value without error message 1`] = `
+<div>
+  <h4>
+    title
+  </h4>
+  <input
+    class=""
+    type="text"
+    value=""
+  />
+  <p />
+</div>
+`;
+
+exports[`ValidationField should render correctly for some value with error message 1`] = `
+<div>
+  <h4>
+    title
+  </h4>
+  <input
+    class="undefined"
+    type="text"
+    value="there is some value"
+  />
+  <p>
+    there is some errors
+  </p>
+</div>
+`;
+
+exports[`ValidationField should render correctly for some value without error message 1`] = `
+<div>
+  <h4>
+    title
+  </h4>
+  <input
+    class=""
+    type="text"
+    value="there is some value"
+  />
+  <p />
+</div>
+`;

@@ -52,6 +52,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'no-param-reassign': 'off',
     'import/no-unresolved': 'off',
+    'react/display-name': 'off',
   },
 
   overrides: [
