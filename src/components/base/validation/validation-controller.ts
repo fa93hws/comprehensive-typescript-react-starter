@@ -20,9 +20,6 @@ export class ValidationController<E> {
     const validateResults = this.validateFns.map(fn => fn(value));
     const errors = Validation.filterError(validateResults);
 
-    if (errors.length === 0) {
-      return null;
-    }
-    return errors[0];
+    return errors.length === 0 ? null : errors[0];
   }
 }
