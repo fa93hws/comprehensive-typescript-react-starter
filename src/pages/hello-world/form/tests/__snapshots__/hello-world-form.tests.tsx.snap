@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelloWorldForm should render correctly 1`] = `
+<form>
+  <div>
+    Password
+  </div>
+  <div>
+    Password Confirmation
+  </div>
+</form>
+`;

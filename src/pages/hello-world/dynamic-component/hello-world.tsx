@@ -26,7 +26,7 @@ export namespace Internal {
   HelloWorld.displayName = 'hello-world-component';
 }
 
-export function createHelloWorld() {
+export function createHelloWorldComponent() {
   const store = new HelloWorldStore();
   const onClick = () => HelloWorldPresenter.loadComponent(store);
 
