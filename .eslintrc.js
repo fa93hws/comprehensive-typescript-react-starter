@@ -42,6 +42,9 @@ module.exports = {
     // We use the babel rule, as it understands class property syntax
     'babel/no-invalid-this': 'error',
     'import/prefer-default-export': 'off',
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": ["**/tests/**", "**/stories/**"]
+    }],
     'no-multi-str': 'off',
     'no-inner-declarations': 'off',
     // There is @typescript-eslint/no-unused-var
